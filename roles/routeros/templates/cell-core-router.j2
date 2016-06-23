@@ -4,18 +4,6 @@
 {% set vrrp1_ip = lookup('dig', 'vrrp.' + site + '.' + LOCALE_DOMAIN + './A', wantlist=True)[0] %}
 {% set ether1_ip_network = [ether1_ip, ether_netmask] | join("") | ipaddr('network') %}
 {% set router_type = routerboard_details['stdout_lines'][1].split()[-1] %}
-{% if router_type == "2011UiAS" %}
-/interface ethernet set [ find default-name=ether7 ] master-port=ether6
-/interface ethernet set [ find default-name=ether8 ] master-port=ether6
-/interface ethernet set [ find default-name=ether9 ] master-port=ether6
-/interface ethernet set [ find default-name=ether10 ] master-port=ether6
-/interface ethernet set [ find default-name=ether2 ] master-port=ether1
-/interface ethernet set [ find default-name=ether3 ] master-port=ether1
-/interface ethernet set [ find default-name=ether4 ] master-port=ether1
-/interface ethernet set [ find default-name=ether5 ] master-port=ether1
-/ip firewall filter remove [find action!=fasttrack-connection !dynamic ]
-/ip firewall filter add chain=forward action=fasttrack-connection connection-state=established,related
-{% endif %}
 
 /ip firewall mangle remove [find action !dynamic]
 

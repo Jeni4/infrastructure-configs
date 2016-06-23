@@ -3,4 +3,4 @@
   gather_facts: False
   connection: paramiko
   roles:
-  - { role: routeros-sector }
+  - { role: routeros, routeros_cell_core_router: true }

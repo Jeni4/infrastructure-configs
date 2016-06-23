@@ -26,15 +26,6 @@
 /interface bridge remove [find]
 /interface bridge port remove [find]
 {% set ether_interface = "ether1" %}
-{% if router_type == "UPA-5HnD" %}
-/interface ethernet set [ find default-name=ether3 ] master-port=ether2-master-local
-/interface ethernet set [ find default-name=ether4 ] master-port=ether2-master-local
-/interface ethernet set [ find default-name=ether5 ] master-port=ether2-master-local
-/interface bridge add name=bridge1
-/interface bridge port add bridge=bridge1 interface=ether2-master-local
-/interface bridge port add bridge=bridge1 interface=ether1-gateway
-{% set ether_interface = "bridge1" %}
-{% endif %}
 /ip address add address={{ ether1_ip }}{{ ether_netmask }} interface={{ ether_interface }}
 /interface vrrp add authentication=ah interface=ether1 name=vrrp1 password={{ vrrp_password }} version=2
 /ip address add address={{ wlan1_ip }}/28 interface=wlan1
