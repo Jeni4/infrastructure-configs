@@ -1,0 +1,13 @@
+---
+- name: Play - add a host
+  hosts: cellrouter
+  gather_facts: False
+  tasks:
+    - name: add new host
+      add_host: name="lhg5.k0ret" groups="client_runtime,mikrotik,memhamwan" mikrotik_host=10.0.7.55
+
+- hosts: [client_runtime]
+  gather_facts: False
+  connection: paramiko
+  roles:
+    - { role: routeros, routeros_client: true }

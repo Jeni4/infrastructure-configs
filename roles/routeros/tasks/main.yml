@@ -30,5 +30,8 @@
 - include: import_script.yml item=cell-core-router
   when: routeros_cell_core_router == true
 
+- include: import_script.yml item=client
+  when: routeros_client == true
+
 - include: install_extra_packages.yml
   when: field_day_core == true

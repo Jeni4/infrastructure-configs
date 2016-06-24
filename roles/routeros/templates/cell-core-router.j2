@@ -1,9 +1,4 @@
-{% set site = inventory_hostname.split(".")[1] %}
 {% set router = inventory_hostname.split(".")[0].replace("r", "", 1) %}
-{% set ether1_ip = lookup('dig', 'ether1.' + inventory_hostname + './A', wantlist=True)[0] %}
-{% set vrrp1_ip = lookup('dig', 'vrrp.' + site + '.' + LOCALE_DOMAIN + './A', wantlist=True)[0] %}
-{% set ether1_ip_network = [ether1_ip, ether_netmask] | join("") | ipaddr('network') %}
-{% set router_type = routerboard_details['stdout_lines'][1].split()[-1] %}
 
 /ip firewall mangle remove [find action !dynamic]
 

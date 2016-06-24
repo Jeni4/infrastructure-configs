@@ -47,6 +47,18 @@
 - name: Define router type
   set_fact: router_type="{{ routerboard_details['stdout_lines'][1].split()[-1] }}"
 
+- name: Define site
+  set_fact: site="{{ inventory_hostname.split(".")[1] }}"
+
+- name: Define ether1_ip
+  set_fact: ether1_ip="{{ lookup('dig', 'ether1.' + inventory_hostname + './A', wantlist=True)[0] }}"
+
+- name: Define vrrp1_ip
+  set_fact: vrrp1_ip="{{ lookup('dig', 'vrrp.' + site + '.' + LOCALE_DOMAIN + './A', wantlist=True)[0] }}"
+
+- name: Define ether1_ip_network
+  set_fact: ether1_ip_network="{{ [ether1_ip, ether_netmask] | join("") | ipaddr('network') }}"
+
 - name: Define architecture
   set_fact: routeros_architecture="mipsbe" #default to mipsbe
 
@@ -68,4 +80,15 @@
     - research
   register: routeros_details
 
-- debug: msg=routeros_details.stdout
+- name: Discover wireless capabilities
+  local_action: command ssh -p {{ mikrotik_port }} {{ mikrotik_user }}@{{ mikrotik_host }} "/interface wireless info hw-info [/interface wireless find default-name=wlan1]"
+  register: wireless_capabilities
+
+- set_fact: tx_chains={{ wireless_capabilities.stdout_lines[1].split()[-1] }}
+  when: wireless_capabilities.stdout.find('input does not match any value of interface') == -1
+
+- set_fact: rx_chains={{ wireless_capabilities.stdout_lines[2].split()[-1] }}
+  when: wireless_capabilities.stdout.find('input does not match any value of interface') == -1
+
+- set_fact: supported_freq_range={{ wireless_capabilities.stdout_lines[0].split()[-1].split("/")[0].split("-") }}
+  when: wireless_capabilities.stdout.find('input does not match any value of interface') == -1
