@@ -1,0 +1,4 @@
+---
+  - include: setup_server.yml
+    tags: prometheus_server
+    when: prometheus_server == true

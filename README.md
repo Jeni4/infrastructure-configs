@@ -15,9 +15,7 @@ apt-get update
 apt-get install python-pip python-netaddr ansible git software-properties-common -y
 pip install dnspython
 ansible-galaxy install yaegashi.blockinfile
-ansible-galaxy install DavidWittman.redis
-ansible-galaxy install Mayeu.RabbitMQ
-ansible-galaxy install Mayeu.sensu
+ansible-galaxy install angstwad.docker_ubuntu
 git clone https://github.com/HamWAN/infrastructure-configs
 ```
 
@@ -41,7 +39,7 @@ Here's an example of configuring a new VM and then setting it up for sensu. Note
 ansible-playbook -i locales/memphis/hosts.sh linux_setup.yml -u ryan_turner -k -K -s --vault-password-file ~/.vault_pass.txt -vvvv --limit eden.mno.memhamwan.net
 ansible-playbook -i locales/memphis/hosts.sh sensu_client.yml -s --vault-password-file ~/.vault_pass.txt -vvvv --limit eden.mno.memhamwan.net
 ansible-playbook -i locales/memphis/hosts.sh chat.yml -s --vault-password-file ~/.vault_pass.txt -vvvv --limit chat.mno.memhamwan.net
-ansible-playbook -i locales/memphis/hosts.sh sensu_checks.yml -s --vault-password-file ~/.vault_pass.txt -vvvv --limit monitor.mno.memhamwan.net
+ansible-playbook -i locales/memphis/hosts.sh prometheus.yml -s --vault-password-file ~/.vault_pass.txt -vvvv --limit monitor.mno.memhamwan.net
 ```
 The first command updates the routers and does some basic universal configuration; the second one then looks for each core router, sector, and ptp and configures them with their appropriate settings.
 

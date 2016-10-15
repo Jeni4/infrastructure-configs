@@ -1,0 +1,28 @@
+---
+- name: Ensure pip is installed
+  apt:
+    pkg={{ item }}
+    state=present
+    update_cache=yes
+  with_items:
+    - python-pip
+  become: true
+
+- name: Install docker-py
+  pip: name=docker-py
+  become: true
+
+- file: path=/srv/prometheus-data state=directory mode=0755
+
+- name: install prometheus
+  become: true
+  docker:
+    name: prometheus
+    image: prom/prometheus
+    state: reloaded
+    restart_policy: always
+    pull: always
+    ports:
+    - "9090:9090"
+    volumes:
+    - /prometheus-data
