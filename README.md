@@ -1,14 +1,8 @@
 # HamWAN Infrastructure Configs
 This repository hosts a group of ansible playbooks to deploy and manage HamWAN infrastructure.
 
-## Prerequisites
-* Ansible 2
-* Python's dns
-* An installed SSH cert to use when connecting with clients
-* python-netaddr, dnspython, blockinfile
-* Working HamWAN portal
-
 ## Usage
+On the machine that you plan to execute ansible from, do the following:
 ```bash
 apt-add-repository ppa:ansible/ansible
 apt-get update
@@ -19,20 +13,7 @@ ansible-galaxy install angstwad.docker_ubuntu
 git clone https://github.com/HamWAN/infrastructure-configs
 ```
 
-A few examples:
-```bash
-ansible-playbook -i locales/memphis/hosts.sh linux_setup.yml -u hamwan -k -K -s --vault-password-file ~/.vault_pass.txt -vvvv --limit voip.leb.memhamwan.net
-```
-~/.vault_pass.txt should contain the vault password for your locale's secret values.
-
-Here's an example using our routeros_sectors playbook to configure an existing sector:
-```bash
-ansible-playbook -i locales/memphis/hosts.sh routeros_sectors.yml --vault-password-file ~/.vault_pass.txt -vvvv --limit omn2.azo.memhamwan.net
-ansible-playbook -i locales/memphis/hosts.sh routeros_site_router.yml --vault-password-file ~/.vault_pass.txt -vvvv --limit r1.mno.memhamwan.net
-ansible-playbook -i locales/memphis/hosts.sh routeros_ptp.yml --vault-password-file ~/.vault_pass.txt -vvvv --limit ptpleb.hil.memhamwan.net
-ansible-playbook -i locales/memphis/hosts.sh routeros_upgrade.yml --vault-password-file ~/.vault_pass.txt -vvvv
-ansible-playbook -i locales/memphis/hosts.sh routeros_omni.yml --vault-password-file ~/.vault_pass.txt -vvvv --limit omn1.leb.memhamwan.net
-```
+You'll need to create a directory inside the "locales" folder with a few items unique to your deployment. We recommend that you place private information in a vault; in our examples below, we utilize the "vault-password-file" argument to make the experience uninteractive.
 
 Here's an example of configuring a new VM and then setting it up for sensu. Note that the user provided for the first command matches whatever you had configured during OS install, but then for the next command it uses your local user and key.
 ```bash
