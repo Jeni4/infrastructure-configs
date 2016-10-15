@@ -3,3 +3,4 @@ locales/memphis/private_configs/extensions.conf.j2
 locales/memphis/private_configs/iax.conf.j2
 locales/memphis/private_configs/sip.conf.j2
 locales/memphis/private_configs/voicemail.conf.j2
+*.retry

@@ -1,0 +1,23 @@
+/ip firewall mangle remove [find action !dynamic]
+/interface wireless channels remove [find]
+/interface wireless channels add band=5ghz-onlyn comment="Cell sites radiate this at 0 degrees (north)" frequency=5920 list=HamWAN name=Sector1-5 width=5
+/interface wireless channels add band=5ghz-onlyn comment="Cell sites radiate this at 120 degrees (south-east)" frequency=5900 list=HamWAN name=Sector2-5 width=5
+/interface wireless channels add band=5ghz-onlyn comment="Cell sites radiate this at 240 degrees (south-west)" frequency=5880 list=HamWAN name=Sector3-5 width=5
+/interface wireless channels add band=5ghz-onlyn comment="Cell sites radiate this at 0 degrees (north)" frequency=5920 list=HamWAN name=Sector1-10 width=10
+/interface wireless channels add band=5ghz-onlyn comment="Cell sites radiate this at 120 degrees (south-east)" frequency=5900 list=HamWAN name=Sector2-10 width=10
+/interface wireless channels add band=5ghz-onlyn comment="Cell sites radiate this at 240 degrees (south-west)" frequency=5880 list=HamWAN name=Sector3-10 width=10
+/interface wireless set 0 disabled=no frequency-mode=superchannel scan-list=HamWAN ssid=HamWAN wireless-protocol=nv2
+
+/ip dhcp-client remove [find]
+/ip dhcp-client add add-default-route=yes dhcp-options=hostname,clientid disabled=no interface=wlan1
+
+/ip firewall nat remove [find]
+/ip firewall nat add chain=srcnat action=masquerade out-interface=wlan1
+/ip address remove [find]
+/ip address add address=10.0.0.1/24 interface=ether1
+/ip pool remove [find name=dhcp-pool]
+/ip pool add name=dhcp-pool ranges=10.0.0.10-10.0.0.254
+/ip dhcp-server network remove [find]
+/ip dhcp-server network add address=10.0.0.0/24 gateway=10.0.0.1
+/ip dhcp-server remove [find]
+/ip dhcp-server add interface=ether1 address-pool=dhcp-pool disabled=no

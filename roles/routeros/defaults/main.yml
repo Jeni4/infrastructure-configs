@@ -9,3 +9,7 @@ client_node: false
 field_day_ap: false
 mikrotik_connect_flags: ""
 upgrade_ros: true
+routeros_ptp: false
+routeros_sector: false
+routeros_cell_core_router: false
+routeros_client: false

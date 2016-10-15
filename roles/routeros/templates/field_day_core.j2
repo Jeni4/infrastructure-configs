@@ -6,27 +6,11 @@
 /interface bridge remove [find name=capsman-hamwan]
 /interface bridge add name=capsman-hamwan disabled=no
 /caps-man manager set enabled=yes
-/caps-man channel remove [find]
-/caps-man channel add band=2ghz-b/g/n name=CH1 frequency=2412
-/caps-man channel add band=2ghz-b/g/n name=CH2 frequency=2417
-/caps-man channel add band=2ghz-b/g/n name=CH3 frequency=2422
-/caps-man channel add band=2ghz-b/g/n name=CH4 frequency=2427
-/caps-man channel add band=2ghz-b/g/n name=CH5 frequency=2432
-/caps-man channel add band=2ghz-b/g/n name=CH6 frequency=2437
-/caps-man channel add band=2ghz-b/g/n name=CH7 frequency=2442
-/caps-man channel add band=2ghz-b/g/n name=CH8 frequency=2447
-/caps-man channel add band=2ghz-b/g/n name=CH9 frequency=2452
-/caps-man channel add band=2ghz-b/g/n name=CH10 frequency=2457
-/caps-man channel add band=2ghz-b/g/n name=CH11 frequency=2462
-/caps-man channel add band=2ghz-b/g/n name=CH12 frequency=2467
-/caps-man channel add band=2ghz-b/g/n name=CH13 frequency=2472
 /caps-man configuration remove [find]
-/caps-man configuration add name=fieldday-wifi-1 channel=CH1 ssid="WiFi by HamWAN" datapath.bridge=capsman-general
-/caps-man configuration add name=fieldday-wifi-5 channel=CH6 ssid="WiFi by HamWAN" datapath.bridge=capsman-general
-/caps-man configuration add name=fieldday-wifi-11 channel=CH11 ssid="WiFi by HamWAN" datapath.bridge=capsman-general
-/caps-man configuration add name=fieldday-hamwan-11 ssid="HamWAN" datapath.bridge=capsman-hamwan security.authentication-types=wpa2-psk security.passphrase=wififorhams
+/caps-man configuration add name=fieldday-wifi ssid="WiFi by HamWAN" datapath.bridge=capsman-general
+/caps-man configuration add name=fieldday-hamwan ssid="HamWAN" datapath.bridge=capsman-hamwan hide-ssid=yes
 /caps-man provisioning remove [find]
-/caps-man provisioning add action=create-dynamic-enabled master-configuration=fieldday-wifi-1 slave-configuration=fieldday-hamwan
+/caps-man provisioning add action=create-dynamic-enabled master-configuration=fieldday-wifi slave-configuration=fieldday-hamwan
 
 
 /ip address remove [find interface=capsman-general]
