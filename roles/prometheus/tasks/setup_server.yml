@@ -12,7 +12,26 @@
   pip: name=docker-py
   become: true
 
+- file: path=/srv/prometheus state=directory mode=0755
+- file: path=/srv/prometheus/nodes.json state=touch mode=0755
 - file: path=/srv/prometheus-data state=directory mode=0755
+- file: path=/srv/grafana-db state=directory mode=0755
+- file: path=/srv/grafana state=directory mode=0755
+- template: src=prometheus.yml dest=/srv/prometheus/prometheus.yml mode=0755 force=yes
+
+- name: remove any old prometheus
+  become: true
+  docker:
+    name: prometheus
+    image: prom/prometheus
+    state: absent
+
+- name: remove any old grafana
+  become: true
+  docker:
+    name: grafana
+    image: grafana/grafana
+    state: absent
 
 - name: install prometheus
   become: true
@@ -25,4 +44,35 @@
     ports:
     - "9090:9090"
     volumes:
-    - /prometheus-data
+    - /srv/prometheus-data:/prometheus-data
+    - /srv/prometheus:/prometheus
+    - /srv/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+
+- name: install grafana
+  become: true
+  docker:
+    name: grafana
+    image: grafana/grafana
+    state: reloaded
+    restart_policy: always
+    pull: always
+    ports:
+    - "3000:3000"
+    volumes:
+    - /srv/grafana-db:/var/lib/grafana
+    # - /srv/grafana:/etc/grafana
+    env:
+      GF_SECURITY_ADMIN_PASSWORD: "{{ grafana_admin_password }}"
+
+- wait_for: port=3000 delay=10
+
+- uri:
+    url: "http://{{ inventory_hostname }}:3000/api/datasources"
+    method: POST
+    user: admin
+    password: "{{ grafana_admin_password }}"
+    body: '{"orgId":1,"name":"Prometheus","type":"prometheus2","typeLogoUrl":"public/app/plugins/datasource/prometheus/img/prometheus_logo.svg","access":"proxy","url":"http://{{ inventory_hostname }}:9090","password":"","user":"","database":"","basicAuth":false,"basicAuthUser":"","basicAuthPassword":"","withCredentials":false,"isDefault":false}'
+    force_basic_auth: yes
+    status_code: 200,500
+    body_format: json

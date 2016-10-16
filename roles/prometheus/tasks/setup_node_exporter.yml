@@ -1,0 +1,10 @@
+---
+  - name: download foo.conf
+    get_url:
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-amd64.tar.gz
+      dest: /tmp/node_exporter.tar.gz
+      mode: 0777
+  - unarchive: src=/tmp/node_exporter.tar.gz dest=/tmp copy=no
+  - copy: src=/tmp/node_exporter-0.12.0.linux-amd64/node_exporter dest=/usr/bin/node_exporter owner=root group=root mode=0777 remote_src=true
+  - template: src=node_exporter.conf.j2 dest=/etc/init/node_exporter.conf mode=0777 owner=root group=root force=yes
+  - service: name=node_exporter state=restarted

@@ -1,0 +1,6 @@
+scrape_configs:
+  - job_name: "node"
+    scrape_interval: "15s"
+    file_sd_configs:
+    - files:
+      - /prometheus/nodes.json

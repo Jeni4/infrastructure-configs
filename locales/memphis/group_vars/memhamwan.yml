@@ -58,6 +58,7 @@ router_user_text_password: "{{ vault_router_user_text_password }}"
 stream_source_password: "{{ vault_stream_source_password }}"
 stream_relay_password: "{{ vault_stream_relay_password }}"
 stream_admin_password: "{{ vault_stream_admin_password }}"
+grafana_admin_password: "{{ vault_grafana_admin_password }}"
 
 monitor_host: monitor.memhamwan.net
 monitor_rabbitmq_secret: "{{ vault_monitor_rabbitmq_secret }}"

@@ -1,5 +1,4 @@
 ---
 - hosts: server
   roles:
-   - angstwad.docker_ubuntu
-   - prometheus
+   - { role: prometheus, prometheus_server: true }

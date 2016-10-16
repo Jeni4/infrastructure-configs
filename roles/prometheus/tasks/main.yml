@@ -2,3 +2,6 @@
   - include: setup_server.yml
     tags: prometheus_server
     when: prometheus_server == true
+
+  - include: setup_node_exporter.yml
+    when: prometheus_node == true
