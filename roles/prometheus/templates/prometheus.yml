@@ -4,3 +4,18 @@ scrape_configs:
     file_sd_configs:
     - files:
       - /prometheus/nodes.json
+
+  - job_name: 'snmp'
+    file_sd_configs:
+    - files:
+      - /prometheus/snmp_exporter.json
+    metrics_path: /snmp
+    params:
+      module: [mikrotik_routeros]
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: {{ inventory_hostname }}:9116  # SNMP exporter.

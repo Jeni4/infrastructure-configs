@@ -1,0 +1,7 @@
+# Run node_exporter
+
+start on startup
+
+script
+   /usr/bin/snmp_exporter -config.file /etc/snmp_exporter/snmp.yml
+end script

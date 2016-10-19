@@ -1,3 +1,4 @@
 ---
 dependencies:
   - { role: angstwad.docker_ubuntu, when: prometheus_server==true }
+  - { role: iptables-rules, iptables_input_accept_rules: [{name: node_exporter-9100, protocol: tcp, port: 9100}], when: prometheus_node==true }
