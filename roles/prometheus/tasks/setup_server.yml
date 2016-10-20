@@ -1,103 +1,103 @@
 ---
-# - name: Ensure pip is installed
-#   apt:
-#     pkg={{ item }}
-#     state=present
-#     update_cache=yes
-#   with_items:
-#     - python-pip
-#   become: true
-#
-# - name: Install docker-py
-#   pip: name=docker-py
-#   become: true
-#
-# - file: path=/srv/prometheus state=directory mode=0755
-# - file: path=/srv/prometheus/nodes.json state=touch mode=0755
-# - file: path=/srv/prometheus/snmp_exporter.json state=touch mode=0755
-# - file: path=/srv/prometheus-data state=directory mode=0755
-# - file: path=/srv/grafana-db state=directory mode=0755
-# - file: path=/srv/grafana state=directory mode=0755
-# - file: path=/srv/alertmanager state=directory mode=0755
-# - file: path=/etc/snmp_exporter state=directory mode=0755
-# - template: src=prometheus.yml dest=/srv/prometheus/prometheus.yml mode=0755 force=yes
-#
-# - name: remove any old prometheus
-#   become: true
-#   docker:
-#     name: prometheus
-#     image: prom/prometheus
-#     state: absent
-#
-# - name: remove any old grafana
-#   become: true
-#   docker:
-#     name: grafana
-#     image: grafana/grafana
-#     state: absent
-#
-# - name: remove any old alertmanager
-#   become: true
-#   docker:
-#     name: alertmanager
-#     image: prom/alertmanager
-#     state: absent
-#
-# - name: install prometheus
-#   become: true
-#   docker:
-#     name: prometheus
-#     image: prom/prometheus
-#     state: reloaded
-#     restart_policy: always
-#     pull: always
-#     ports:
-#     - "9090:9090"
-#     volumes:
-#     - /srv/prometheus-data:/prometheus-data
-#     - /srv/prometheus:/prometheus
-#     - /srv/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-#
-# - name: install alertmanager
-#   become: true
-#   docker:
-#     name: alertmanager
-#     image: prom/alertmanager
-#     state: reloaded
-#     restart_policy: always
-#     pull: always
-#     ports:
-#     - "9093:9093"
-#     volumes:
-#     - /srv/alertmanager:/alertmanager
-#
-#
-# - name: install grafana
-#   become: true
-#   docker:
-#     name: grafana
-#     image: grafana/grafana
-#     state: reloaded
-#     restart_policy: always
-#     pull: always
-#     ports:
-#     - "3000:3000"
-#     volumes:
-#     - /srv/grafana-db:/var/lib/grafana
-#     env:
-#       GF_SECURITY_ADMIN_PASSWORD: "{{ grafana_admin_password }}"
-#
-# - wait_for: port=3000 delay=10
-#
-# - uri:
-#     url: "http://{{ inventory_hostname }}:3000/api/datasources"
-#     method: POST
-#     user: admin
-#     password: "{{ grafana_admin_password }}"
-#     body: '{"orgId":1,"name":"Prometheus","type":"prometheus2","typeLogoUrl":"public/app/plugins/datasource/prometheus/img/prometheus_logo.svg","access":"proxy","url":"http://{{ inventory_hostname }}:9090","password":"","user":"","database":"","basicAuth":false,"basicAuthUser":"","basicAuthPassword":"","withCredentials":false,"isDefault":false}'
-#     force_basic_auth: yes
-#     status_code: 200,500
-#     body_format: json
+- name: Ensure pip is installed
+  apt:
+    pkg={{ item }}
+    state=present
+    update_cache=yes
+  with_items:
+    - python-pip
+  become: true
+
+- name: Install docker-py
+  pip: name=docker-py
+  become: true
+
+- file: path=/srv/prometheus state=directory mode=0755
+- file: path=/srv/prometheus/nodes.json state=touch mode=0755
+- file: path=/srv/prometheus/snmp_exporter.json state=touch mode=0755
+- file: path=/srv/prometheus-data state=directory mode=0755
+- file: path=/srv/grafana-db state=directory mode=0755
+- file: path=/srv/grafana state=directory mode=0755
+- file: path=/srv/alertmanager state=directory mode=0755
+- file: path=/etc/snmp_exporter state=directory mode=0755
+- template: src=prometheus.yml dest=/srv/prometheus/prometheus.yml mode=0755 force=yes
+
+- name: remove any old prometheus
+  become: true
+  docker:
+    name: prometheus
+    image: prom/prometheus
+    state: absent
+
+- name: remove any old grafana
+  become: true
+  docker:
+    name: grafana
+    image: grafana/grafana
+    state: absent
+
+- name: remove any old alertmanager
+  become: true
+  docker:
+    name: alertmanager
+    image: prom/alertmanager
+    state: absent
+
+- name: install prometheus
+  become: true
+  docker:
+    name: prometheus
+    image: prom/prometheus
+    state: reloaded
+    restart_policy: always
+    pull: always
+    ports:
+    - "9090:9090"
+    volumes:
+    - /srv/prometheus-data:/prometheus-data
+    - /srv/prometheus:/prometheus
+    - /srv/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+- name: install alertmanager
+  become: true
+  docker:
+    name: alertmanager
+    image: prom/alertmanager
+    state: reloaded
+    restart_policy: always
+    pull: always
+    ports:
+    - "9093:9093"
+    volumes:
+    - /srv/alertmanager:/alertmanager
+
+
+- name: install grafana
+  become: true
+  docker:
+    name: grafana
+    image: grafana/grafana
+    state: reloaded
+    restart_policy: always
+    pull: always
+    ports:
+    - "3000:3000"
+    volumes:
+    - /srv/grafana-db:/var/lib/grafana
+    env:
+      GF_SECURITY_ADMIN_PASSWORD: "{{ grafana_admin_password }}"
+
+- wait_for: port=3000 delay=10
+
+- uri:
+    url: "http://{{ inventory_hostname }}:3000/api/datasources"
+    method: POST
+    user: admin
+    password: "{{ grafana_admin_password }}"
+    body: '{"orgId":1,"name":"Prometheus","type":"prometheus2","typeLogoUrl":"public/app/plugins/datasource/prometheus/img/prometheus_logo.svg","access":"proxy","url":"http://{{ inventory_hostname }}:9090","password":"","user":"","database":"","basicAuth":false,"basicAuthUser":"","basicAuthPassword":"","withCredentials":false,"isDefault":false}'
+    force_basic_auth: yes
+    status_code: 200,500
+    body_format: json
 - name: download foo.conf
   get_url:
     url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-amd64.tar.gz
