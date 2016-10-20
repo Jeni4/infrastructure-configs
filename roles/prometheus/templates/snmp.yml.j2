@@ -6,59 +6,159 @@ mikrotik_routeros:
   walk:
     - 1.3.6.1.4.1.14988.1.1
   metrics:
-    - name: mtxrWlRtabAddr
-      oid: 	1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabRouterOSVersion
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.10
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabUptime
-      oid: 	1.3.6.1.4.1.14988.1.1.1.2.1.11
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.11
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabSignalToNoise
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.12
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    - name: mtxrWlRtabSignalCh0Tx
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.13
+      indexes:
+        - labelname: mtxrWlRtabAddr
+          type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    - name: mtxrWlRtabSignalCh0Rx
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.14
+      indexes:
+        - labelname: mtxrWlRtabAddr
+          type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    - name: mtxrWlRtabSignalCh1Tx
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.15
+      indexes:
+        - labelname: mtxrWlRtabAddr
+          type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    - name: mtxrWlRtabSignalCh1Rx
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.16
+      indexes:
+        - labelname: mtxrWlRtabAddr
+          type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    - name: mtxrWlRtabSignalCh2Tx
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.17
+      indexes:
+        - labelname: mtxrWlRtabAddr
+          type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    - name: mtxrWlRtabSignalCh2Rx
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.18
+      indexes:
+        - labelname: mtxrWlRtabAddr
+          type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    - name: mtxrWlRtabSignal
+      oid: 1.3.6.1.4.1.14988.1.1.1.2.1.19
+      indexes:
+        - labelname: mtxrWlRtabAddr
+          type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabIface
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.2
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabTxBytes
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.4
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabRxBytes
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.5
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabTxPackets
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.6
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabRxPackets
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.7
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabTxRate
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.8
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlRtabRxRate
       oid: 1.3.6.1.4.1.14988.1.1.1.2.1.9
       indexes:
         - labelname: mtxrWlRtabAddr
           type: PhysAddress48
-
+      lookups:
+        - labels: [mtxrWlRtabAddr]
+          labelname: mtxrWlRtabAddr
+          oid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     - name: mtxrWlApIndex
       oid: 1.3.6.1.4.1.14988.1.1.1.3.1.1
     - name: mtxrWlApOverallTxCCQ
@@ -320,19 +420,20 @@ mikrotik_routeros:
           labelname: mtxrNeighborIpAddress
           oid: 1.3.6.1.4.1.14988.1.1.11.1.1.2
         - labels: [mtxrNeighborIpAddress]
+          labelname: mtxrNeighborMacAddress
+          oid: 1.3.6.1.4.1.14988.1.1.11.1.1.3
+        - labels: [mtxrNeighborIpAddress]
+          labelname: mtxrNeighborVersion
+          oid: 1.3.6.1.4.1.14988.1.1.11.1.1.4
+        - labels: [mtxrNeighborIpAddress]
+          labelname: mtxrNeighborPlatform
+          oid: 1.3.6.1.4.1.14988.1.1.11.1.1.5
+        - labels: [mtxrNeighborIpAddress]
           labelname: mtxrNeighborIdentity
           oid: 1.3.6.1.4.1.14988.1.1.11.1.1.6
         - labels: [mtxrNeighborIpAddress]
           labelname: mtxrNeighborSoftwareID
           oid: 1.3.6.1.4.1.14988.1.1.11.1.1.7
-        - labels: [mtxrNeighborIpAddress]
-          labelname: mtxrNeighborPlatform
-          oid: 1.3.6.1.4.1.14988.1.1.11.1.1.5
-        - labels: [mtxrNeighborIpAddress]
-          labelname: mtxrNeighborVersion
-          oid: 1.3.6.1.4.1.14988.1.1.11.1.1.4
-
-
     - name: mtxrInterfaceStatsIndex
       oid: 1.3.6.1.4.1.14988.1.1.14.1.1.1
       indexes:
