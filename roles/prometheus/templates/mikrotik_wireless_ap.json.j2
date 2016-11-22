@@ -1,958 +1,962 @@
 {
-  "id": 3,
-  "title": "MikroTik Wireless AP",
-  "tags": [],
-  "style": "dark",
-  "timezone": "browser",
-  "editable": true,
-  "hideControls": false,
-  "sharedCrosshair": false,
-  "rows": [
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "id": 1,
-          "interval": null,
-          "isNew": true,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "targets": [
-            {
-              "expr": "mtxrWlApClientCount{instance=\"$node\"}",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 600
-            }
-          ],
-          "thresholds": "",
-          "title": "AP Clients",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "avg"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "format": "hertz",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "id": 7,
-          "interval": null,
-          "isNew": true,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "targets": [
-            {
-              "expr": "mtxrWlApFreq{instance=\"$node\"}*1000000",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 600
-            }
-          ],
-          "thresholds": "",
-          "title": "Frequency",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "avg"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "format": "dBm",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "id": 8,
-          "interval": null,
-          "isNew": true,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "targets": [
-            {
-              "expr": "mtxrWlApNoiseFloor{instance=\"$node\"}",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 600
-            }
-          ],
-          "thresholds": "-100,-105,-110",
-          "title": "Noise floor",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "avg"
-        },
-        {
-          "editable": true,
-          "error": false,
-          "headings": true,
-          "id": 6,
-          "isNew": true,
-          "limit": 10,
-          "links": [
-            {
-              "dashUri": "db/mikrotik-routeros-device",
-              "dashboard": "MikroTik RouterOS Device",
-              "includeVars": true,
-              "title": "MikroTik RouterOS Device",
-              "type": "dashboard"
-            }
-          ],
-          "query": "MikroTik",
-          "recent": false,
-          "search": true,
-          "span": 2,
-          "starred": false,
-          "tags": [],
-          "title": "Other Dashboards",
-          "type": "dashlist"
-        }
-      ],
-      "title": "Row"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "format": "s",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "id": 4,
-          "interval": null,
-          "isNew": true,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "repeatIteration": 1479696622435,
-          "scopedVars": {
-            "client_mac": {
-              "selected": false,
-              "text": "4C:5E:0C:8E:C9:CA",
-              "value": "4C:5E:0C:8E:C9:CA"
-            }
-          },
-          "span": 1,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "targets": [
-            {
-              "expr": "mtxrWlRtabUptime{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}\t/100",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 600
-            }
-          ],
-          "thresholds": "",
-          "title": "Uptime",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "avg"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "id": 9,
-          "interval": null,
-          "isNew": true,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": " dB",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "repeatIteration": 1479696622435,
-          "scopedVars": {
-            "client_mac": {
-              "selected": false,
-              "text": "4C:5E:0C:8E:C9:CA",
-              "value": "4C:5E:0C:8E:C9:CA"
-            }
-          },
-          "span": 1,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "targets": [
-            {
-              "expr": "mtxrWlRtabSignalToNoise{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 600
-            }
-          ],
-          "thresholds": "",
-          "title": "Signal to Noise",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "avg"
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 3,
-          "isNew": true,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "repeatIteration": 1479696622435,
-          "scopedVars": {
-            "client_mac": {
-              "selected": false,
-              "text": "4C:5E:0C:8E:C9:CA",
-              "value": "4C:5E:0C:8E:C9:CA"
-            }
-          },
-          "seriesOverrides": [],
-          "span": 2,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "mtxrWlRtabTxRate{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}\t",
-              "intervalFactor": 2,
-              "legendFormat": "tx",
-              "refId": "A",
-              "step": 120
-            },
-            {
-              "expr": "mtxrWlRtabRxRate{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "rx",
-              "refId": "B",
-              "step": 120
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Air Rates",
-          "tooltip": {
-            "msResolution": true,
-            "shared": true,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "xaxis": {
-            "show": true
-          },
-          "yaxes": [
-            {
-              "format": "bps",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "fill": 0,
-          "grid": {
-            "threshold1": -70,
-            "threshold1Color": "rgba(26, 202, 0, 0.27)",
-            "threshold2": -92,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)",
-            "thresholdLine": true
-          },
-          "id": 2,
-          "isNew": true,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "hideEmpty": false,
-            "hideZero": true,
-            "max": false,
-            "min": false,
-            "rightSide": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "repeatIteration": 1479696622435,
-          "scopedVars": {
-            "client_mac": {
-              "selected": false,
-              "text": "4C:5E:0C:8E:C9:CA",
-              "value": "4C:5E:0C:8E:C9:CA"
-            }
-          },
-          "seriesOverrides": [],
-          "span": 4,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "mtxrWlRtabSignal{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "Signal",
-              "refId": "A",
-              "step": 60
-            },
-            {
-              "expr": "mtxrWlRtabSignalCh0Rx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "rx-ch0",
-              "refId": "B",
-              "step": 60
-            },
-            {
-              "expr": "mtxrWlRtabSignalCh0Tx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "tx-ch0",
-              "refId": "C",
-              "step": 60
-            },
-            {
-              "expr": "mtxrWlRtabSignalCh1Rx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "rx-ch1",
-              "refId": "D",
-              "step": 60
-            },
-            {
-              "expr": "mtxrWlRtabSignalCh1Tx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "tx-ch1",
-              "refId": "E",
-              "step": 60
-            },
-            {
-              "expr": "mtxrWlRtabSignalCh2Rx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "rx-ch2",
-              "refId": "F",
-              "step": 60
-            },
-            {
-              "expr": "mtxrWlRtabSignalCh2Tx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
-              "intervalFactor": 2,
-              "legendFormat": "tx-ch2",
-              "refId": "G",
-              "step": 60
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Signal",
-          "tooltip": {
-            "msResolution": true,
-            "shared": true,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "xaxis": {
-            "show": true
-          },
-          "yaxes": [
-            {
-              "format": "dBm",
-              "label": "",
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": "Prometheus",
-          "editable": true,
-          "error": false,
-          "fill": 0,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 5,
-          "isNew": true,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "repeatIteration": 1479696622435,
-          "scopedVars": {
-            "client_mac": {
-              "selected": false,
-              "text": "4C:5E:0C:8E:C9:CA",
-              "value": "4C:5E:0C:8E:C9:CA"
-            }
-          },
-          "seriesOverrides": [
-            {
-              "alias": "tx",
-              "yaxis": 1
-            },
-            {
-              "alias": "tx-packets",
-              "yaxis": 2
-            },
-            {
-              "alias": "rx-packets",
-              "yaxis": 2
-            }
-          ],
-          "span": 4,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "irate(mtxrWlRtabTxBytes{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
-              "intervalFactor": 2,
-              "legendFormat": "tx-bytes",
-              "refId": "A",
-              "step": 60
-            },
-            {
-              "expr": "irate(mtxrWlRtabRxBytes{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
-              "intervalFactor": 2,
-              "legendFormat": "rx-bytes",
-              "refId": "B",
-              "step": 60
-            },
-            {
-              "expr": "irate(mtxrWlRtabTxPackets{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
-              "intervalFactor": 2,
-              "legendFormat": "tx-packets",
-              "refId": "C",
-              "step": 60
-            },
-            {
-              "expr": "irate(mtxrWlRtabRxPackets{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
-              "intervalFactor": 2,
-              "legendFormat": "rx-packets",
-              "refId": "D",
-              "step": 60
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Traffic",
-          "tooltip": {
-            "msResolution": true,
-            "shared": true,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "xaxis": {
-            "show": true
-          },
-          "yaxes": [
-            {
-              "format": "Bps",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "pps",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        }
-      ],
-      "repeat": "client_mac",
-      "scopedVars": {
-        "client_mac": {
-          "selected": false,
-          "text": "4C:5E:0C:8E:C9:CA",
-          "value": "4C:5E:0C:8E:C9:CA"
-        }
-      },
-      "showTitle": true,
-      "title": "$client_mac"
-    }
-  ],
-  "time": {
-    "from": "now-6h",
-    "to": "now"
-  },
-  "timepicker": {
-    "refresh_intervals": [
-      "5s",
-      "10s",
-      "30s",
-      "1m",
-      "5m",
-      "15m",
-      "30m",
-      "1h",
-      "2h",
-      "1d"
-    ],
-    "time_options": [
-      "5m",
-      "15m",
-      "1h",
-      "6h",
-      "12h",
-      "24h",
-      "2d",
-      "7d",
-      "30d"
-    ]
-  },
-  "templating": {
-    "list": [
+  "dashboard": {
+    "id": null,
+    "title": "MikroTik Wireless AP",
+    "dashboard": "mikrotik_wireless_ap",
+    "tags": [],
+    "style": "dark",
+    "timezone": "browser",
+    "editable": true,
+    "hideControls": false,
+    "sharedCrosshair": false,
+    "rows": [
       {
-        "current": {
-          "selected": true,
-          "tags": [],
-          "text": "ptpmno.leb.memhamwan.net",
-          "value": "ptpmno.leb.memhamwan.net"
-        },
-        "datasource": "Prometheus",
-        "hide": 0,
-        "includeAll": false,
-        "label": "Node",
-        "multi": false,
-        "name": "node",
-        "options": [
+        "collapse": false,
+        "editable": true,
+        "height": "250px",
+        "panels": [
           {
-            "selected": false,
-            "text": "omn1.leb.memhamwan.net",
-            "value": "omn1.leb.memhamwan.net"
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "format": "none",
+            "gauge": {
+              "maxValue": 100,
+              "minValue": 0,
+              "show": false,
+              "thresholdLabels": false,
+              "thresholdMarkers": true
+            },
+            "id": 1,
+            "interval": null,
+            "isNew": true,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [
+              {
+                "name": "value to text",
+                "value": 1
+              },
+              {
+                "name": "range to text",
+                "value": 2
+              }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+              {
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+              }
+            ],
+            "span": 2,
+            "sparkline": {
+              "fillColor": "rgba(31, 118, 189, 0.18)",
+              "full": false,
+              "lineColor": "rgb(31, 120, 193)",
+              "show": true
+            },
+            "targets": [
+              {
+                "expr": "mtxrWlApClientCount{instance=\"$node\"}",
+                "intervalFactor": 2,
+                "refId": "A",
+                "step": 600
+              }
+            ],
+            "thresholds": "",
+            "title": "AP Clients",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+              {
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+              }
+            ],
+            "valueName": "avg"
           },
           {
-            "selected": false,
-            "text": "omn2.azo.memhamwan.net",
-            "value": "omn2.azo.memhamwan.net"
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "format": "hertz",
+            "gauge": {
+              "maxValue": 100,
+              "minValue": 0,
+              "show": false,
+              "thresholdLabels": false,
+              "thresholdMarkers": true
+            },
+            "id": 7,
+            "interval": null,
+            "isNew": true,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [
+              {
+                "name": "value to text",
+                "value": 1
+              },
+              {
+                "name": "range to text",
+                "value": 2
+              }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+              {
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+              }
+            ],
+            "span": 2,
+            "sparkline": {
+              "fillColor": "rgba(31, 118, 189, 0.18)",
+              "full": false,
+              "lineColor": "rgb(31, 120, 193)",
+              "show": false
+            },
+            "targets": [
+              {
+                "expr": "mtxrWlApFreq{instance=\"$node\"}*1000000",
+                "intervalFactor": 2,
+                "legendFormat": "",
+                "refId": "A",
+                "step": 600
+              }
+            ],
+            "thresholds": "",
+            "title": "Frequency",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+              {
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+              }
+            ],
+            "valueName": "avg"
           },
           {
-            "selected": false,
-            "text": "ptpleb.sco.memhamwan.net",
-            "value": "ptpleb.sco.memhamwan.net"
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "format": "dBm",
+            "gauge": {
+              "maxValue": 100,
+              "minValue": 0,
+              "show": false,
+              "thresholdLabels": false,
+              "thresholdMarkers": true
+            },
+            "id": 8,
+            "interval": null,
+            "isNew": true,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [
+              {
+                "name": "value to text",
+                "value": 1
+              },
+              {
+                "name": "range to text",
+                "value": 2
+              }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+              {
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+              }
+            ],
+            "span": 2,
+            "sparkline": {
+              "fillColor": "rgba(31, 118, 189, 0.18)",
+              "full": true,
+              "lineColor": "rgb(31, 120, 193)",
+              "show": true
+            },
+            "targets": [
+              {
+                "expr": "mtxrWlApNoiseFloor{instance=\"$node\"}",
+                "intervalFactor": 2,
+                "refId": "A",
+                "step": 600
+              }
+            ],
+            "thresholds": "-100,-105,-110",
+            "title": "Noise floor",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+              {
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+              }
+            ],
+            "valueName": "avg"
           },
           {
-            "selected": true,
-            "text": "ptpmno.leb.memhamwan.net",
-            "value": "ptpmno.leb.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "r1.azo.memhamwan.net",
-            "value": "r1.azo.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec1.hil.memhamwan.net",
-            "value": "sec1.hil.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec1.mno.memhamwan.net",
-            "value": "sec1.mno.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec1.sco.memhamwan.net",
-            "value": "sec1.sco.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec2.hil.memhamwan.net",
-            "value": "sec2.hil.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec2.mno.memhamwan.net",
-            "value": "sec2.mno.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec2.sco.memhamwan.net",
-            "value": "sec2.sco.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec3.hil.memhamwan.net",
-            "value": "sec3.hil.memhamwan.net"
-          },
-          {
-            "selected": false,
-            "text": "sec3.sco.memhamwan.net",
-            "value": "sec3.sco.memhamwan.net"
+            "editable": true,
+            "error": false,
+            "headings": true,
+            "id": 6,
+            "isNew": true,
+            "limit": 10,
+            "links": [
+              {
+                "dashUri": "db/mikrotik-routeros-device",
+                "dashboard": "MikroTik RouterOS Device",
+                "includeVars": true,
+                "title": "MikroTik RouterOS Device",
+                "type": "dashboard"
+              }
+            ],
+            "query": "MikroTik",
+            "recent": false,
+            "search": true,
+            "span": 2,
+            "starred": false,
+            "tags": [],
+            "title": "Other Dashboards",
+            "type": "dashlist"
           }
         ],
-        "query": "label_values(mtxrWlApFreq, instance)",
-        "refresh": 0,
-        "type": "query"
+        "title": "Row"
       },
       {
-        "current": {
-          "text": "All",
-          "value": "$__all"
-        },
-        "datasource": "Prometheus",
-        "hide": 2,
-        "includeAll": true,
-        "label": "Client Mac",
-        "multi": false,
-        "name": "client_mac",
-        "options": [
+        "collapse": false,
+        "editable": true,
+        "height": "250px",
+        "panels": [
           {
-            "selected": true,
-            "text": "All",
-            "value": "$__all"
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "format": "s",
+            "gauge": {
+              "maxValue": 100,
+              "minValue": 0,
+              "show": false,
+              "thresholdLabels": false,
+              "thresholdMarkers": true
+            },
+            "id": 4,
+            "interval": null,
+            "isNew": true,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [
+              {
+                "name": "value to text",
+                "value": 1
+              },
+              {
+                "name": "range to text",
+                "value": 2
+              }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+              {
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+              }
+            ],
+            "repeatIteration": 1479696622435,
+            "scopedVars": {
+              "client_mac": {
+                "selected": false,
+                "text": "4C:5E:0C:8E:C9:CA",
+                "value": "4C:5E:0C:8E:C9:CA"
+              }
+            },
+            "span": 1,
+            "sparkline": {
+              "fillColor": "rgba(31, 118, 189, 0.18)",
+              "full": false,
+              "lineColor": "rgb(31, 120, 193)",
+              "show": false
+            },
+            "targets": [
+              {
+                "expr": "mtxrWlRtabUptime{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}\t/100",
+                "intervalFactor": 2,
+                "refId": "A",
+                "step": 600
+              }
+            ],
+            "thresholds": "",
+            "title": "Uptime",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+              {
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+              }
+            ],
+            "valueName": "avg"
           },
           {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "format": "none",
+            "gauge": {
+              "maxValue": 100,
+              "minValue": 0,
+              "show": false,
+              "thresholdLabels": false,
+              "thresholdMarkers": true
+            },
+            "id": 9,
+            "interval": null,
+            "isNew": true,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [
+              {
+                "name": "value to text",
+                "value": 1
+              },
+              {
+                "name": "range to text",
+                "value": 2
+              }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": " dB",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+              {
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+              }
+            ],
+            "repeatIteration": 1479696622435,
+            "scopedVars": {
+              "client_mac": {
+                "selected": false,
+                "text": "4C:5E:0C:8E:C9:CA",
+                "value": "4C:5E:0C:8E:C9:CA"
+              }
+            },
+            "span": 1,
+            "sparkline": {
+              "fillColor": "rgba(31, 118, 189, 0.18)",
+              "full": false,
+              "lineColor": "rgb(31, 120, 193)",
+              "show": true
+            },
+            "targets": [
+              {
+                "expr": "mtxrWlRtabSignalToNoise{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "refId": "A",
+                "step": 600
+              }
+            ],
+            "thresholds": "",
+            "title": "Signal to Noise",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+              {
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+              }
+            ],
+            "valueName": "avg"
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 3,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": true,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": true
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeatIteration": 1479696622435,
+            "scopedVars": {
+              "client_mac": {
+                "selected": false,
+                "text": "4C:5E:0C:8E:C9:CA",
+                "value": "4C:5E:0C:8E:C9:CA"
+              }
+            },
+            "seriesOverrides": [],
+            "span": 2,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "mtxrWlRtabTxRate{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}\t",
+                "intervalFactor": 2,
+                "legendFormat": "tx",
+                "refId": "A",
+                "step": 120
+              },
+              {
+                "expr": "mtxrWlRtabRxRate{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "rx",
+                "refId": "B",
+                "step": 120
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Air Rates",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "bps",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+              },
+              {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+              }
+            ]
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 0,
+            "grid": {
+              "threshold1": -70,
+              "threshold1Color": "rgba(26, 202, 0, 0.27)",
+              "threshold2": -92,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)",
+              "thresholdLine": true
+            },
+            "id": 2,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": true,
+              "hideEmpty": false,
+              "hideZero": true,
+              "max": false,
+              "min": false,
+              "rightSide": false,
+              "show": true,
+              "total": false,
+              "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeatIteration": 1479696622435,
+            "scopedVars": {
+              "client_mac": {
+                "selected": false,
+                "text": "4C:5E:0C:8E:C9:CA",
+                "value": "4C:5E:0C:8E:C9:CA"
+              }
+            },
+            "seriesOverrides": [],
+            "span": 4,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "mtxrWlRtabSignal{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "Signal",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "mtxrWlRtabSignalCh0Rx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "rx-ch0",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "mtxrWlRtabSignalCh0Tx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "tx-ch0",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "mtxrWlRtabSignalCh1Rx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "rx-ch1",
+                "refId": "D",
+                "step": 60
+              },
+              {
+                "expr": "mtxrWlRtabSignalCh1Tx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "tx-ch1",
+                "refId": "E",
+                "step": 60
+              },
+              {
+                "expr": "mtxrWlRtabSignalCh2Rx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "rx-ch2",
+                "refId": "F",
+                "step": 60
+              },
+              {
+                "expr": "mtxrWlRtabSignalCh2Tx{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}",
+                "intervalFactor": 2,
+                "legendFormat": "tx-ch2",
+                "refId": "G",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Signal",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "dBm",
+                "label": "",
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+              },
+              {
+                "format": "short",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+              }
+            ]
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 0,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 5,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": true,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeatIteration": 1479696622435,
+            "scopedVars": {
+              "client_mac": {
+                "selected": false,
+                "text": "4C:5E:0C:8E:C9:CA",
+                "value": "4C:5E:0C:8E:C9:CA"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "tx",
+                "yaxis": 1
+              },
+              {
+                "alias": "tx-packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "rx-packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 4,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrWlRtabTxBytes{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx-bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrWlRtabRxBytes{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx-bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrWlRtabTxPackets{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx-packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrWlRtabRxPackets{instance=\"$node\",mtxrWlRtabAddr=\"$client_mac\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx-packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Bps",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": null,
+                "logBase": 1,
+                "max": null,
+                "min": null,
+                "show": true
+              }
+            ]
+          }
+        ],
+        "repeat": "client_mac",
+        "scopedVars": {
+          "client_mac": {
             "selected": false,
             "text": "4C:5E:0C:8E:C9:CA",
             "value": "4C:5E:0C:8E:C9:CA"
           }
-        ],
-        "query": "label_values(mtxrWlRtabRxBytes{instance=\"$node\"}, mtxrWlRtabAddr)",
-        "refresh": 0,
-        "type": "query"
+        },
+        "showTitle": true,
+        "title": "$client_mac"
       }
-    ]
+    ],
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ]
+    },
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "selected": true,
+            "tags": [],
+            "text": "ptpmno.leb.memhamwan.net",
+            "value": "ptpmno.leb.memhamwan.net"
+          },
+          "datasource": "Prometheus",
+          "hide": 0,
+          "includeAll": false,
+          "label": "Node",
+          "multi": false,
+          "name": "node",
+          "options": [
+            {
+              "selected": false,
+              "text": "omn1.leb.memhamwan.net",
+              "value": "omn1.leb.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "omn2.azo.memhamwan.net",
+              "value": "omn2.azo.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "ptpleb.sco.memhamwan.net",
+              "value": "ptpleb.sco.memhamwan.net"
+            },
+            {
+              "selected": true,
+              "text": "ptpmno.leb.memhamwan.net",
+              "value": "ptpmno.leb.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "r1.azo.memhamwan.net",
+              "value": "r1.azo.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec1.hil.memhamwan.net",
+              "value": "sec1.hil.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec1.mno.memhamwan.net",
+              "value": "sec1.mno.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec1.sco.memhamwan.net",
+              "value": "sec1.sco.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec2.hil.memhamwan.net",
+              "value": "sec2.hil.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec2.mno.memhamwan.net",
+              "value": "sec2.mno.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec2.sco.memhamwan.net",
+              "value": "sec2.sco.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec3.hil.memhamwan.net",
+              "value": "sec3.hil.memhamwan.net"
+            },
+            {
+              "selected": false,
+              "text": "sec3.sco.memhamwan.net",
+              "value": "sec3.sco.memhamwan.net"
+            }
+          ],
+          "query": "label_values(mtxrWlApFreq, instance)",
+          "refresh": 0,
+          "type": "query"
+        },
+        {
+          "current": {
+            "text": "All",
+            "value": "$__all"
+          },
+          "datasource": "Prometheus",
+          "hide": 2,
+          "includeAll": true,
+          "label": "Client Mac",
+          "multi": false,
+          "name": "client_mac",
+          "options": [
+            {
+              "selected": true,
+              "text": "All",
+              "value": "$__all"
+            },
+            {
+              "selected": false,
+              "text": "4C:5E:0C:8E:C9:CA",
+              "value": "4C:5E:0C:8E:C9:CA"
+            }
+          ],
+          "query": "label_values(mtxrWlRtabRxBytes{instance=\"$node\"}, mtxrWlRtabAddr)",
+          "refresh": 0,
+          "type": "query"
+        }
+      ]
+    },
+    "annotations": {
+      "list": []
+    },
+    "refresh": "30s",
+    "schemaVersion": 12,
+    "version": 17,
+    "links": [],
+    "gnetId": null
   },
-  "annotations": {
-    "list": []
-  },
-  "refresh": "30s",
-  "schemaVersion": 12,
-  "version": 17,
-  "links": [],
-  "gnetId": null
+  "overwrite": false
 }

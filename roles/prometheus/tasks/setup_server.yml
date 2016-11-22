@@ -20,7 +20,6 @@
 - file: path=/srv/grafana state=directory mode=0755
 - file: path=/srv/alertmanager state=directory mode=0755
 - file: path=/etc/snmp_exporter state=directory mode=0755
-- template: src=prometheus.yml dest=/srv/prometheus/prometheus.yml mode=0755 force=yes
 
 - name: remove any old prometheus
   become: true
@@ -43,6 +42,8 @@
     image: prom/alertmanager
     state: absent
 
+- template: src=prometheus.yml dest=/srv/prometheus.yml mode=0755 force=yes
+
 - name: install prometheus
   become: true
   docker:
@@ -56,7 +57,7 @@
     volumes:
     - /srv/prometheus-data:/prometheus-data
     - /srv/prometheus:/prometheus
-    - /srv/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    - /srv/prometheus.yml:/etc/prometheus/prometheus.yml
 
 - name: install alertmanager
   become: true
@@ -94,10 +95,30 @@
     method: POST
     user: admin
     password: "{{ grafana_admin_password }}"
-    body: '{"orgId":1,"name":"Prometheus","type":"prometheus2","typeLogoUrl":"public/app/plugins/datasource/prometheus/img/prometheus_logo.svg","access":"proxy","url":"http://{{ inventory_hostname }}:9090","password":"","user":"","database":"","basicAuth":false,"basicAuthUser":"","basicAuthPassword":"","withCredentials":false,"isDefault":false}'
+    body: '{"orgId":1,"name":"Prometheus","type":"prometheus","typeLogoUrl":"public/app/plugins/datasource/prometheus/img/prometheus_logo.svg","access":"direct","url":"http://{{ inventory_hostname }}:9090","password":"","user":"","database":"","basicAuth":false,"basicAuthUser":"","basicAuthPassword":"","withCredentials":false,"isDefault":true}'
     force_basic_auth: yes
     status_code: 200,500
     body_format: json
+- uri:
+    url: "http://{{ inventory_hostname }}:3000/api/dashboards/db"
+    method: POST
+    user: admin
+    password: "{{ grafana_admin_password }}"
+    body: "{{ lookup('file','roles/prometheus/templates/mikrotik_routeros_device.json.j2') }}"
+    force_basic_auth: yes
+    status_code: 200,412
+    body_format: json
+
+- uri:
+    url: "http://{{ inventory_hostname }}:3000/api/dashboards/db"
+    method: POST
+    user: admin
+    password: "{{ grafana_admin_password }}"
+    body: "{{ lookup('file','roles/prometheus/templates/mikrotik_wireless_ap.json.j2') }}"
+    force_basic_auth: yes
+    status_code: 200,412
+    body_format: json
+
 - name: download foo.conf
   get_url:
     url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-amd64.tar.gz
