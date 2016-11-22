@@ -1,7 +1,9 @@
-# Run node_exporter
+[Unit]
+Description=SNMP Exporter
 
-start on startup
+[Service]
+User=root
+ExecStart=/usr/bin/snmp_exporter -config.file /etc/snmp_exporter/snmp.yml
 
-script
-   /usr/bin/snmp_exporter -config.file /etc/snmp_exporter/snmp.yml
-end script
+[Install]
+WantedBy=default.target

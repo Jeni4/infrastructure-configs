@@ -106,7 +106,9 @@
 - unarchive: src=/tmp/snmp_exporter-0.1.0.linux-amd64.tar.gz dest=/tmp copy=no
 - copy: src=/tmp/snmp_exporter-0.1.0.linux-amd64/snmp_exporter dest=/usr/bin/snmp_exporter owner=root group=root mode=0755 remote_src=true
 - copy: src=/tmp/snmp_exporter-0.1.0.linux-amd64/snmp.yml dest=/etc/snmp_exporter/snmp.yml owner=root group=root mode=0755 remote_src=true
-- template: src=snmp_exporter.j2 dest=/etc/init/snmp_exporter.conf mode=0755 owner=root group=root force=yes
+- template: src=snmp_exporter.j2 dest=/etc/systemd/system/snmp_exporter.service mode=0755 owner=root group=root force=yes
 - template: src=snmp.yml.j2 dest=/etc/snmp_exporter/snmp.yml mode=0755 owner=root group=root force=yes #TODO: when my PR gets accepted, replace with a lineinfile to add the community to the config
 - service: name=snmp_exporter state=restarted
-#TODO: make this generate the two dynamic config files
+- template: src=dynamic_inventory.py dest=/srv/prometheus/dynamic_inventory.py mode=0755 owner=root group=root force=yes
+- cron: name="Grab SNMP exporter hosts" minute="*/2" job="/usr/bin/python /srv/prometheus/dynamic_inventory.py mikrotik /srv/prometheus/snmp_exporter.json"
+- cron: name="Grab server hosts" minute="*/2" job="/usr/bin/python /srv/prometheus/dynamic_inventory.py server /srv/prometheus/nodes.json"

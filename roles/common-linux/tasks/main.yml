@@ -13,8 +13,9 @@
   tags: [users]
 - include: restrict_ssh.yml
   tags: [ssh]
-- include: restrict_firewall.yml
-  tags: [firewall]
+# - include: restrict_firewall.yml
+#   tags: [firewall]
+# TODO: replace this with a management of iptables that plays nicely with docker... iptables-persistent and modify docker's upstart to wait for iptables, maybe?
 - include: install_ntp.yml
   tags: [ntp]
 - include: install_postfix.yml

@@ -1,7 +1,9 @@
-# Run node_exporter
+[Unit]
+Description=Node Exporter
 
-start on startup
+[Service]
+User=root
+ExecStart=/usr/bin/node_exporter
 
-script
-   /usr/bin/node_exporter
-end script
+[Install]
+WantedBy=default.target
