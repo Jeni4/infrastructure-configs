@@ -1,0 +1,23 @@
+{% raw %}
+ALERT MikroTikUndervoltage
+  IF mtxrHlVoltage < 120
+  FOR 1m
+  LABELS { severity = "page" }
+  ANNOTATIONS {
+    summary = "{{ $labels.instance }}'s powersupply is less than 12 V"
+  }
+ALERT MikroTikOvervoltage
+  IF mtxrHlVoltage > 270
+  FOR 1m
+  LABELS { severity = "page" }
+  ANNOTATIONS {
+    summary = "{{ $labels.instance }}'s powersupply is more than 27 V"
+  }
+ALERT FailedToPing
+  IF probe_success{job="ping-everything"} == 0
+  FOR 2m
+  LABELS { severity = "page" }
+  ANNOTATIONS {
+    summary = "{{ $labels.instance }}'s ICMP ping timed-out."
+  }
+{% endraw %}

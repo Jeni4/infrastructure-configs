@@ -452,8 +452,8 @@
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "bridgeLocal",
-                "value": "bridgeLocal"
+                "text": "ether1-master-local",
+                "value": "ether1-master-local"
               }
             },
             "seriesOverrides": [
@@ -569,12 +569,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether1",
-                "value": "ether1"
+                "text": "ether10-slave-local",
+                "value": "ether10-slave-local"
               }
             },
             "seriesOverrides": [
@@ -691,12 +691,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether10",
-                "value": "ether10"
+                "text": "ether11-slave-local",
+                "value": "ether11-slave-local"
               }
             },
             "seriesOverrides": [
@@ -813,12 +813,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether2",
-                "value": "ether2"
+                "text": "ether12-slave-local",
+                "value": "ether12-slave-local"
               }
             },
             "seriesOverrides": [
@@ -935,134 +935,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether3",
-                "value": "ether3"
-              }
-            },
-            "seriesOverrides": [
-              {
-                "alias": "rx",
-                "yaxis": 1
-              },
-              {
-                "alias": "rx packets",
-                "yaxis": 2
-              },
-              {
-                "alias": "tx packets",
-                "yaxis": 2
-              }
-            ],
-            "span": 3,
-            "stack": false,
-            "steppedLine": false,
-            "targets": [
-              {
-                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
-                "intervalFactor": 2,
-                "legendFormat": "rx bytes",
-                "refId": "A",
-                "step": 60
-              },
-              {
-                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
-                "intervalFactor": 2,
-                "legendFormat": "tx bytes",
-                "refId": "B",
-                "step": 60
-              },
-              {
-                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
-                "intervalFactor": 2,
-                "legendFormat": "rx packets",
-                "refId": "C",
-                "step": 60
-              },
-              {
-                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
-                "intervalFactor": 2,
-                "legendFormat": "tx packets",
-                "refId": "D",
-                "step": 60
-              }
-            ],
-            "timeFrom": null,
-            "timeShift": null,
-            "title": "$interface Traffic",
-            "tooltip": {
-              "msResolution": true,
-              "shared": true,
-              "sort": 0,
-              "value_type": "cumulative"
-            },
-            "type": "graph",
-            "xaxis": {
-              "show": true
-            },
-            "yaxes": [
-              {
-                "format": "Kbits",
-                "label": "Data",
-                "logBase": 1,
-                "max": null,
-                "min": 0,
-                "show": true
-              },
-              {
-                "format": "pps",
-                "label": "Packets",
-                "logBase": 1,
-                "max": null,
-                "min": 0,
-                "show": true
-              }
-            ],
-            "repeatPanelId": 8
-          },
-          {
-            "aliasColors": {},
-            "bars": false,
-            "datasource": "Prometheus",
-            "editable": true,
-            "error": false,
-            "fill": 1,
-            "grid": {
-              "threshold1": null,
-              "threshold1Color": "rgba(216, 200, 27, 0.27)",
-              "threshold2": null,
-              "threshold2Color": "rgba(234, 112, 112, 0.22)"
-            },
-            "id": 18,
-            "isNew": true,
-            "legend": {
-              "avg": false,
-              "current": false,
-              "max": false,
-              "min": false,
-              "show": true,
-              "total": false,
-              "values": false
-            },
-            "lines": true,
-            "linewidth": 2,
-            "links": [],
-            "minSpan": 3,
-            "nullPointMode": "connected",
-            "percentage": false,
-            "pointradius": 5,
-            "points": false,
-            "renderer": "flot",
-            "repeat": null,
-            "repeatIteration": 1479696622434,
-            "scopedVars": {
-              "interface": {
-                "selected": false,
-                "text": "ether4",
-                "value": "ether4"
+                "text": "ether13-slave-local",
+                "value": "ether13-slave-local"
               }
             },
             "seriesOverrides": [
@@ -1179,12 +1057,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether5",
-                "value": "ether5"
+                "text": "ether14-slave-local",
+                "value": "ether14-slave-local"
               }
             },
             "seriesOverrides": [
@@ -1301,12 +1179,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether6",
-                "value": "ether6"
+                "text": "ether15-slave-local",
+                "value": "ether15-slave-local"
               }
             },
             "seriesOverrides": [
@@ -1423,12 +1301,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether7",
-                "value": "ether7"
+                "text": "ether16-slave-local",
+                "value": "ether16-slave-local"
               }
             },
             "seriesOverrides": [
@@ -1545,12 +1423,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether8",
-                "value": "ether8"
+                "text": "ether17-slave-local",
+                "value": "ether17-slave-local"
               }
             },
             "seriesOverrides": [
@@ -1667,12 +1545,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ether9",
-                "value": "ether9"
+                "text": "ether18-slave-local",
+                "value": "ether18-slave-local"
               }
             },
             "seriesOverrides": [
@@ -1789,12 +1667,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "ipip1",
-                "value": "ipip1"
+                "text": "ether19-slave-local",
+                "value": "ether19-slave-local"
               }
             },
             "seriesOverrides": [
@@ -1911,12 +1789,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "sfp1",
-                "value": "sfp1"
+                "text": "ether2-slave-local",
+                "value": "ether2-slave-local"
               }
             },
             "seriesOverrides": [
@@ -2033,12 +1911,12 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "sit1",
-                "value": "sit1"
+                "text": "ether20-slave-local",
+                "value": "ether20-slave-local"
               }
             },
             "seriesOverrides": [
@@ -2155,12 +2033,1598 @@
             "points": false,
             "renderer": "flot",
             "repeat": null,
-            "repeatIteration": 1479696622434,
+            "repeatIteration": 1479838214066,
             "scopedVars": {
               "interface": {
                 "selected": false,
-                "text": "sstp-leb",
-                "value": "sstp-leb"
+                "text": "ether21-slave-local",
+                "value": "ether21-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 28,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether22-slave-local",
+                "value": "ether22-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 29,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether23-slave-local",
+                "value": "ether23-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 30,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether24-slave-local",
+                "value": "ether24-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 31,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether3-slave-local",
+                "value": "ether3-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 32,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether4-slave-local",
+                "value": "ether4-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 33,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether5-slave-local",
+                "value": "ether5-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 34,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether6-slave-local",
+                "value": "ether6-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 35,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether7-slave-local",
+                "value": "ether7-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 36,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether8-slave-local",
+                "value": "ether8-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 37,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "ether9-slave-local",
+                "value": "ether9-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 38,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "sfp1-slave-local",
+                "value": "sfp1-slave-local"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 39,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "sstp-out1",
+                "value": "sstp-out1"
+              }
+            },
+            "seriesOverrides": [
+              {
+                "alias": "rx",
+                "yaxis": 1
+              },
+              {
+                "alias": "rx packets",
+                "yaxis": 2
+              },
+              {
+                "alias": "tx packets",
+                "yaxis": 2
+              }
+            ],
+            "span": 3,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx bytes",
+                "refId": "A",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxBytes{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx bytes",
+                "refId": "B",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverRxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "rx packets",
+                "refId": "C",
+                "step": 60
+              },
+              {
+                "expr": "irate(mtxrInterfaceStatsDriverTxPackets{instance=\"$node\",mtxrInterfaceStatsName=\"$interface\"}[5m])",
+                "intervalFactor": 2,
+                "legendFormat": "tx packets",
+                "refId": "D",
+                "step": 60
+              }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$interface Traffic",
+            "tooltip": {
+              "msResolution": true,
+              "shared": true,
+              "sort": 0,
+              "value_type": "cumulative"
+            },
+            "type": "graph",
+            "xaxis": {
+              "show": true
+            },
+            "yaxes": [
+              {
+                "format": "Kbits",
+                "label": "Data",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              },
+              {
+                "format": "pps",
+                "label": "Packets",
+                "logBase": 1,
+                "max": null,
+                "min": 0,
+                "show": true
+              }
+            ],
+            "repeatPanelId": 8
+          },
+          {
+            "aliasColors": {},
+            "bars": false,
+            "datasource": "Prometheus",
+            "editable": true,
+            "error": false,
+            "fill": 1,
+            "grid": {
+              "threshold1": null,
+              "threshold1Color": "rgba(216, 200, 27, 0.27)",
+              "threshold2": null,
+              "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            },
+            "id": 40,
+            "isNew": true,
+            "legend": {
+              "avg": false,
+              "current": false,
+              "max": false,
+              "min": false,
+              "show": true,
+              "total": false,
+              "values": false
+            },
+            "lines": true,
+            "linewidth": 2,
+            "links": [],
+            "minSpan": 3,
+            "nullPointMode": "connected",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "repeatIteration": 1479838214066,
+            "scopedVars": {
+              "interface": {
+                "selected": false,
+                "text": "vrrp1",
+                "value": "vrrp1"
               }
             },
             "seriesOverrides": [
@@ -2253,6 +3717,66 @@
           }
         },
         "title": "New row"
+      },
+      {
+        "collapse": false,
+        "editable": true,
+        "height": "250px",
+        "panels": [
+          {
+            "columns": [],
+            "editable": true,
+            "error": false,
+            "fontSize": "100%",
+            "hideTimeOverride": false,
+            "id": 18,
+            "isNew": true,
+            "links": [],
+            "pageSize": null,
+            "scroll": true,
+            "showHeader": true,
+            "sort": {
+              "col": 0,
+              "desc": true
+            },
+            "span": 6,
+            "styles": [
+              {
+                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                "pattern": "Metric",
+                "type": "string"
+              },
+              {
+                "colorMode": null,
+                "colors": [
+                  "rgba(245, 54, 54, 0.9)",
+                  "rgba(237, 129, 40, 0.89)",
+                  "rgba(50, 172, 45, 0.97)"
+                ],
+                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                "decimals": 2,
+                "pattern": "Time",
+                "thresholds": [],
+                "type": "date",
+                "unit": "short"
+              }
+            ],
+            "targets": [
+              {
+                "expr": "mtxrNeighborIfIndex{instance=\"$node\"}",
+                "intervalFactor": 2,
+                "legendFormat": "{{mtxrNeighborIdentity}}, {{mtxrNeighborIpAddress}}, {{mtxrNeighborSoftwareID}}, {{mtxrNeighborPlatform}}, {{mtxrNeighborVersion}}",
+                "refId": "A",
+                "step": 2
+              }
+            ],
+            "timeFrom": "1s",
+            "title": "Neighbors at Interfaces",
+            "transform": "timeseries_to_rows",
+            "type": "table"
+          }
+        ],
+        "title": "New row"
       }
     ],
     "time": {
@@ -2289,9 +3813,8 @@
         {
           "current": {
             "selected": true,
-            "tags": [],
-            "text": "er1.mil.memhamwan.net",
-            "value": "er1.mil.memhamwan.net"
+            "text": "r1.leb.memhamwan.net",
+            "value": "r1.leb.memhamwan.net"
           },
           "datasource": "Prometheus",
           "hide": 0,
@@ -2301,7 +3824,7 @@
           "name": "node",
           "options": [
             {
-              "selected": true,
+              "selected": false,
               "text": "er1.mil.memhamwan.net",
               "value": "er1.mil.memhamwan.net"
             },
@@ -2351,7 +3874,7 @@
               "value": "ptpsco.leb.memhamwan.net"
             },
             {
-              "selected": false,
+              "selected": true,
               "text": "r1.leb.memhamwan.net",
               "value": "r1.leb.memhamwan.net"
             },
@@ -2412,6 +3935,7 @@
         },
         {
           "current": {
+            "selected": true,
             "text": "All",
             "value": "$__all"
           },
@@ -2429,78 +3953,138 @@
             },
             {
               "selected": false,
-              "text": "bridgeLocal",
-              "value": "bridgeLocal"
+              "text": "ether1-master-local",
+              "value": "ether1-master-local"
             },
             {
               "selected": false,
-              "text": "ether1",
-              "value": "ether1"
+              "text": "ether10-slave-local",
+              "value": "ether10-slave-local"
             },
             {
               "selected": false,
-              "text": "ether10",
-              "value": "ether10"
+              "text": "ether11-slave-local",
+              "value": "ether11-slave-local"
             },
             {
               "selected": false,
-              "text": "ether2",
-              "value": "ether2"
+              "text": "ether12-slave-local",
+              "value": "ether12-slave-local"
             },
             {
               "selected": false,
-              "text": "ether3",
-              "value": "ether3"
+              "text": "ether13-slave-local",
+              "value": "ether13-slave-local"
             },
             {
               "selected": false,
-              "text": "ether4",
-              "value": "ether4"
+              "text": "ether14-slave-local",
+              "value": "ether14-slave-local"
             },
             {
               "selected": false,
-              "text": "ether5",
-              "value": "ether5"
+              "text": "ether15-slave-local",
+              "value": "ether15-slave-local"
             },
             {
               "selected": false,
-              "text": "ether6",
-              "value": "ether6"
+              "text": "ether16-slave-local",
+              "value": "ether16-slave-local"
             },
             {
               "selected": false,
-              "text": "ether7",
-              "value": "ether7"
+              "text": "ether17-slave-local",
+              "value": "ether17-slave-local"
             },
             {
               "selected": false,
-              "text": "ether8",
-              "value": "ether8"
+              "text": "ether18-slave-local",
+              "value": "ether18-slave-local"
             },
             {
               "selected": false,
-              "text": "ether9",
-              "value": "ether9"
+              "text": "ether19-slave-local",
+              "value": "ether19-slave-local"
             },
             {
               "selected": false,
-              "text": "ipip1",
-              "value": "ipip1"
+              "text": "ether2-slave-local",
+              "value": "ether2-slave-local"
             },
             {
               "selected": false,
-              "text": "sfp1",
-              "value": "sfp1"
+              "text": "ether20-slave-local",
+              "value": "ether20-slave-local"
             },
             {
               "selected": false,
-              "text": "sit1",
-              "value": "sit1"
+              "text": "ether21-slave-local",
+              "value": "ether21-slave-local"
             },
             {
               "selected": false,
-              "text": "sstp-leb",
-              "value": "sstp-leb"
+              "text": "ether22-slave-local",
+              "value": "ether22-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether23-slave-local",
+              "value": "ether23-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether24-slave-local",
+              "value": "ether24-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether3-slave-local",
+              "value": "ether3-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether4-slave-local",
+              "value": "ether4-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether5-slave-local",
+              "value": "ether5-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether6-slave-local",
+              "value": "ether6-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether7-slave-local",
+              "value": "ether7-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether8-slave-local",
+              "value": "ether8-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "ether9-slave-local",
+              "value": "ether9-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "sfp1-slave-local",
+              "value": "sfp1-slave-local"
+            },
+            {
+              "selected": false,
+              "text": "sstp-out1",
+              "value": "sstp-out1"
+            },
+            {
+              "selected": false,
+              "text": "vrrp1",
+              "value": "vrrp1"
             }
           ],
           "query": "label_values(mtxrInterfaceStatsDriverRxBytes{instance=\"$node\"}, mtxrInterfaceStatsName)",
@@ -2514,7 +4098,7 @@
     },
     "refresh": "30s",
     "schemaVersion": 12,
-    "version": 17,
+    "version": 8,
     "links": [],
     "gnetId": null
   },

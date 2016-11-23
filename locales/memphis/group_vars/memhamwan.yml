@@ -26,6 +26,8 @@ SERVER_SNMP: 44.34.128.0/21
 SERVER_DNS_PRIMARY: 44.34.132.1
 SERVER_DNS_SECONDARY: 44.34.133.1
 SERVER_SMTP: smtp-relay.gmail.com
+ALERTMANAGER_EMAIL_ADDRESS: alertmanager@memhamwan.org
+ALERTMANAGER_EMAIL_PASSWORD: "{{ vault_alertmanager_email_password }}"
 SNMP_COMMUNITY: hamwan
 asterisk_ha_ip: 44.34.132.5
 asterisk_ha_nodes:
@@ -39,6 +41,7 @@ bigbluebutton_ha_nodes:
   - bigbluebutton.mno.memhamwan.net
 
 NETOPS_EMAIL: netops@memhamwan.org
+monitoring_email: monitoring-noreply@memhamwan.net
 
 SECTOR_CHANNEL_WIDTH: 10
 
