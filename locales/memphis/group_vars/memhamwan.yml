@@ -63,6 +63,7 @@ stream_relay_password: "{{ vault_stream_relay_password }}"
 stream_admin_password: "{{ vault_stream_admin_password }}"
 grafana_admin_password: "{{ vault_grafana_admin_password }}"
 
+portal_organizational_user: MemHamWAN
 monitor_host: monitor.memhamwan.net
 monitor_rabbitmq_secret: "{{ vault_monitor_rabbitmq_secret }}"
 monitor_telegram_api_token: "{{ vault_monitor_telegram_api_token }}"

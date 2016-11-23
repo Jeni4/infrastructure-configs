@@ -28,8 +28,7 @@ scrape_configs:
       module: [icmp]  # Look for a HTTP 200 response.
     file_sd_configs:
     - files:
-      - /prometheus/snmp_exporter.json
-      - /prometheus/blackbox_exporter_servers.json
+      - /prometheus/blackbox_exporter.json
     relabel_configs:
       - source_labels: [__address__]
         regex: (.*)(:80)?
