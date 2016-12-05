@@ -1,14 +1,14 @@
 {% raw %}
 ALERT MikroTikUndervoltage
   IF mtxrHlVoltage < 120
-  FOR 1m
+  FOR 2m
   LABELS { severity = "page" }
   ANNOTATIONS {
     summary = "{{ $labels.instance }}'s powersupply is less than 12 V"
   }
 ALERT MikroTikOvervoltage
   IF mtxrHlVoltage > 270
-  FOR 1m
+  FOR 2m
   LABELS { severity = "page" }
   ANNOTATIONS {
     summary = "{{ $labels.instance }}'s powersupply is more than 27 V"
@@ -22,35 +22,35 @@ ALERT FailedToPing
   }
 ALERT Ping2StdDevOut
   IF (probe_duration_seconds{job="ping-everything"} > avg_over_time(probe_duration_seconds{job="ping-everything"}[1d]) + 2*stddev_over_time(probe_duration_seconds{job="ping-everything"}[1d])) > 1.2 * avg_over_time(probe_duration_seconds{job="ping-everything"}[1d])
-  FOR 2m
+  FOR 30m
   LABELS { severity = "page" }
   ANNOTATIONS {
     summary = "{{ $labels.instance}}'s ICMP ping is more than 2 standard deviations off it's 1 day average."
   }
 ALERT TXTabRate2StdDevOut
   IF (mtxrWlRtabTxRate < avg_over_time(mtxrWlRtabTxRate[1d]) - 2*stddev_over_time(mtxrWlRtabTxRate[1d])) < 0.8 * avg_over_time(mtxrWlRtabTxRate[1d])
-  FOR 2m
+  FOR 30m
   LABELS { severity = "page" }
   ANNOTATIONS {
     summary = "{{ $labels.instance}}'s TX air rate is 2 standard deviations off it's 1 day average."
   }
 ALERT RXTabRate2StdDevOut
   IF (mtxrWlRtabRxRate < avg_over_time(mtxrWlRtabRxRate[1d]) - 2*stddev_over_time(mtxrWlRtabRxRate[1d])) < 0.8 * avg_over_time(mtxrWlRtabRxRate[1d])
-  FOR 2m
+  FOR 30m
   LABELS { severity = "page" }
   ANNOTATIONS {
     summary = "{{ $labels.instance}}'s RX air rate is 2 standard deviations off it's 1 day average."
   }
 ALERT TXAPRate2StdDevOut
   IF (mtxrWlApTxRate < avg_over_time(mtxrWlApTxRate[1d]) - 2*stddev_over_time(mtxrWlApTxRate[1d])) < 0.8 * avg_over_time(mtxrWlApTxRate[1d])
-  FOR 2m
+  FOR 30m
   LABELS { severity = "page" }
   ANNOTATIONS {
     summary = "{{ $labels.instance}}'s TX air rate is 2 standard deviations off it's 1 day average."
   }
 ALERT RXAPRate2StdDevOut
   IF (mtxrWlApRxRate < avg_over_time(mtxrWlApRxRate[1d]) - 2*stddev_over_time(mtxrWlApRxRate[1d])) < 0.8 * avg_over_time(mtxrWlApRxRate[1d])
-  FOR 2m
+  FOR 30m
   LABELS { severity = "page" }
   ANNOTATIONS {
     summary = "{{ $labels.instance}}'s RX air rate is 2 standard deviations off it's 1 day average."
